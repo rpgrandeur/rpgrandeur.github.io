@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+body {
+  font-family: 'Lato', sans-serif;
+  line-height: 1.5;
+}
+
+/* NAV BAR */
+nav a {
+  text-decoration: none;
+}
+
+nav {
+  font-family: 'Lato', sans-serif;
+  display: inline-block;
+  width: 100%;
+  background-color: #000;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+}
+
+nav ul {
+  background: #000;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: stretch;
+}
+
+nav li {
+  color: #fff;
+  background: red;
+  height: 100%;
+  display: flex;
+  float: left;
+  padding: .5em;
+  position: relative;
+  text-decoration: none;
+  margin: 0;
+
+  align-items: center;
+  height: inherit;
+}
+
+nav li a {
+  color: #fff;
+}
+
+nav li:hover,
+nav li:focus-within {
+  background: #2C2F33;
+  cursor: pointer;
+}
+
+nav li:focus-within a {
+  outline: none;
+}
+
+nav ul li ul, nav ul li ul li ul {
+  top: 100%;
+  left: 0;
+  background: orange;
+  opacity: 0;
+  min-width: 5em;
+  position: absolute;
+  display: none;
+}
+
+nav ul li:hover>ul,
+nav ul li:focus-within>ul,
+nav ul li ul:hover,
+nav ul li ul:focus{
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+nav ul li ul li {
+  top: 0;
+  clear: both;
+  width: 100%;
+}
+img {
+  max-width: 100%;
+  max-height: 1.5em;
+}
+
+
+/* Hero Villain Choice Flex Box */
+.herovillainchoice {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+}
+.herovillainchoice a {
+
+  text-decoration: none;
+}
+.herochoice, .villainchoice{
+  padding: .5vw;
+  flex-grow: 1;
+  position: relative;
+}
+.herochoice a > div, .villainchoice a > div{
+  height: 30vw;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+.herochoice a > div{
+  background-image: url('../images/Heroes.jpg');
+}
+.villainchoice a > div{
+  background-image: url('../images/Villains.jpg');
+}
+.herochoice div div, .villainchoice div div{
+  background-color: rgba(0,0,0,.75);
+  color: white;
+  padding: 5% 10%;
+  font-size: 130%;
+}
+
+/* INFOBOX */
+@media (min-width:812px){
+  aside {
+    float: right;
+    max-width: 300px;
+    background: white;
+  }
+}
+/* portable infoboxes */
+.portable-infobox {
+  clear: right;
+  padding: 1%;
+}
+.pi-item-spacing {
+  padding: .5em .7em;
+}
+.pi-title {
+  background-color: black;
+  color: white;
+  font-size: 1.4em;
+
+  font-weight: bold;
+  line-height: 2em;
+  text-align: center;
+  margin: 0;
+}
+.pi-image {
+  display: flex;
+  text-align: center;
+  margin: 0;
+}
+.pi-image img {
+  width: 100%;
+  margin: 0;
+}
+.pi-data {
+  background: gray;
+  font-size: 1em;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+.pi-data-label {
+  font-size: inherit;
+  padding-right: 1vw;
+  margin-bottom: inherit;
+  margin-top: 0;
+  flex-basis: 40%;
+}
+
+.pi-data-value {
+  font-size: inherit;
+  padding-left: 1vw;
+  flex-basis: 60%;
+}
